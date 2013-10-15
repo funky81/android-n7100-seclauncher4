@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/help_hub_guide_text_size" android:textStyle="normal" android:textColor="@*android:color/black" android:background="@drawable/help_popup_picker_bg_w_01" android:paddingLeft="@dimen/help_hub_guide_text_padding_left" android:paddingTop="@dimen/help_hub_guide_text_padding_top" android:paddingRight="@dimen/help_hub_guide_text_padding_right" android:paddingBottom="@dimen/help_hub_guide_text_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/help_hub_guide_text_width" android:text="@string/tutorial_complete"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

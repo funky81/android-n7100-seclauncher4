@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<matched
+  xmlns:launcher="http://schemas.android.com/apk/res/com.sec.android.app.launcher">
+    <matchedapp launcher:beforeComponent="com.sec.android.app.videoplayer/.activity.MainTab" launcher:afterComponent="com.samsung.everglades.video/.VideoMain" />
+    <matchedapp launcher:beforeComponent="com.android.providers.downloads.ui/.DownloadsListTab" launcher:afterComponent="com.android.providers.downloads.ui/.DownloadList" />
+    <matchedapp launcher:beforeComponent="com.android.browser/.BrowserActivity" launcher:afterComponent="com.sec.android.app.sbrowser/.SBrowserMainActivity" />
+    <matchedapp launcher:beforeComponent="com.android.settings/.Settings" launcher:afterComponent="com.android.settings/.SettingsTabActivity" />
+    <matchedapp launcher:beforeComponent="com.samsung.helphub/.activity.HelpHubActivity" launcher:afterComponent="com.samsung.helphub/.HelpHubActivity" />
+    <matchedapp launcher:beforeComponent="com.sec.pcw/.hybrid.CloudApp" launcher:afterComponent="com.sec.pcw/com.mfluent.asp.ui.MobileChargesNotificationActivity" />
+    <matchedwidget launcher:beforeComponent="com.sec.android.app.clockpackage.alarmwidget/.AlarmWidgetProvider" launcher:afterComponent="com.sec.android.widgetapp.alarmwidget/.ClockAlarmWidgetProvider" />
+</matched>

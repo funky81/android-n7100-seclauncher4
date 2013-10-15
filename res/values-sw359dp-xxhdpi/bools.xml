@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="config_FolderHovering">true</bool>
+    <bool name="config_isUsingMoreLineinFolder">true</bool>
+    <bool name="wsqv_UseVariableSizedPanel">true</bool>
+    <bool name="hotseat_showTitleSoftKey">false</bool>
+    <bool name="hotseat_showTitlePermKey">true</bool>
+    <bool name="menu_titleExpandTabs">true</bool>
+    <bool name="menu_titleShowDownloadedText">false</bool>
+</resources>

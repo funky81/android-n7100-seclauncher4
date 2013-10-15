@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nondisableapps
+  xmlns:launcher="http://schemas.android.com/apk/res/com.sec.android.app.launcher">
+    <item>com.android.contacts</item>
+    <item>com.sec.android.gallery3d</item>
+    <item>com.android.settings</item>
+    <item>com.android.mms</item>
+    <item>com.sec.android.app.camera</item>
+    <item>com.sec.android.app.music</item>
+    <item>com.samsung.everglades.video</item>
+    <item>com.android.calendar</item>
+    <item>com.android.email</item>
+    <item>com.sec.everglades</item>
+    <item>com.sec.android.app.samsungapps</item>
+    <item>com.sec.android.app.myfiles</item>
+    <item>flipboard.app</item>
+    <item>com.samsung.android.app.galaxyfinder</item>
+    <item>com.samsung.helphub</item>
+    <item>com.sec.android.app.clockpackage</item>
+    <item>com.sec.android.app.sbrowser</item>
+    <item>com.sprint.zone</item>
+    <item>com.coremobility.app.vnotes</item>
+    <item>com.sequent.controlpanel</item>
+    <item>com.sprint.voicemail</item>
+    <item>com.sprint.w.installer</item>
+    <item>com.sec.android.app.voicenote</item>
+    <item>com.samsung.android.snote</item>
+    <item>com.verizon.viewdini</item>
+    <item>com.sec.android.app.setupwizard</item>
+    <item>com.asurion.android.verizon.vms</item>
+    <item>com.samsung.android.app.pinboard</item>
+    <item>com.sec.android.quickmemo</item>
+    <item>com.evernote</item>
+</nondisableapps>

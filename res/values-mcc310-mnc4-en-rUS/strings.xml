@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="long_press_widget_to_add">Touch and hold a widget to move it</string>
+    <string name="guide_move_apps">Touch and hold an item until it can be edited</string>
+</resources>

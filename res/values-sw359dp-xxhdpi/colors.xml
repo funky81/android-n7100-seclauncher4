@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="menu_title_bar_text_color">#ffffffff</color>
+    <color name="menu_title_bar_unselectedTextColor">#ccffffff</color>
+    <color name="menu_title_bar_disableTextButtonColor">#66ffffff</color>
+</resources>

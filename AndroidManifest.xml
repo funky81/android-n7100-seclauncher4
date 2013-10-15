@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:sharedUserId="android.uid.sec.activitywidget" android:versionCode="18" android:versionName="4.3-N9005XXUBMJ1" android:sharedUserLabel="@string/application_name" package="com.sec.android.app.launcher"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <original-package android:name="com.android.launcher2" />
+    <uses-permission android:name="com.samsung.helphub.permission.HELP" />
+    <supports-screens android:anyDensity="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" />
+    <adopt-permissions android:name="com.android.launcher" />
+    <adopt-permissions android:name="com.sec.android.app.twlauncher" />
+    <adopt-permissions android:name="com.sec.android.app.seniorlauncher" />
+    <permission android:label="@string/permlab_install_shortcut" android:name="com.android.launcher.permission.INSTALL_SHORTCUT" android:protectionLevel="dangerous" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:description="@string/permdesc_install_shortcut" />
+    <permission android:label="@string/permlab_uninstall_shortcut" android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" android:protectionLevel="dangerous" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:description="@string/permdesc_uninstall_shortcut" />
+    <permission android:label="@string/permlab_read_settings" android:name="com.android.launcher.permission.READ_SETTINGS" android:protectionLevel="dangerous" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:description="@string/permdesc_read_settings" />
+    <permission android:label="@string/permlab_write_settings" android:name="com.android.launcher.permission.WRITE_SETTINGS" android:protectionLevel="dangerous" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:description="@string/permdesc_write_settings" />
+    <permission android:name="com.sec.android.launcher.permission.ADD_WIDGET_SHORTCUT" android:protectionLevel="signatureOrSystem" />
+    <permission android:label="@string/permlab_write_settings" android:name="com.android.launcher.permission.ID" android:protectionLevel="signatureOrSystem" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:description="@string/permdesc_write_settings" />
+    <permission android:name="com.sec.permission.BACKUP_RESTORE_HOMESCREEN" android:protectionLevel="signatureOrSystem" />
+    <permission android:label="@string/permlab_install_widget" android:name="com.android.launcher.action.INSTALL_WIDGET" android:protectionLevel="normal" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:description="@string/permdesc_install_widget" />
+    <uses-permission android:name="android.permission.BIND_APPWIDGET" />
+    <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="com.sec.android.launcher.permission.ADD_WIDGET_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.dashwire.config.launcher.SEND_HOMESCREEN_RESULT" />
+    <uses-permission android:name="com.samsung.android.permission.SSRM_NOTIFICATION_PERMISSION" />
+    <uses-permission android:name="com.samsung.android.providers.context.permission.READ_APP_USAGE_DB" />
+    <uses-permission android:name="com.samsung.android.providers.context.permission.READ_PROFILE" />
+    <uses-permission android:name="com.samsung.android.widgetapp.briefing4x2.permission.READ_APP_USAGE" />
+    <uses-permission android:name="com.samsung.android.app.storyalbumwidget.permission.ACCESS_STORYALBUM_WIDGET" />
+    <uses-permission android:name="com.samsung.android.service.travel.permission.TRAVEL_SERVICE" />
+    <uses-permission android:name="com.samsung.android.tripwidget.permission.TRAVEL_WIDGET" />
+    <uses-permission android:name="com.samsung.helphub.permission.GET_DATA" />
+    <uses-permission android:name="com.samsung.helphub.permission.WRITE_DATA" />
+    <uses-permission android:name="com.sec.android.app.twdvfs.DVFS_BOOSTER_PERMISSION" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" />
+    <uses-permission android:name="com.sec.android.providers.insight.permission.READ_INSIGHT_DB" />
+    <uses-permission android:name="com.sec.android.widgetapp.ap.hero.accuweather.permission.READ_ACCU_DATA" />
+    <uses-permission android:name="com.sec.android.widgetapp.ap.hero.accuweather.permission.WRITE_ACCU_DATA" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="com.sec.android.phone.permission.DATA_ROAMING_SETTINGS_ENHANCED" />
+    <uses-permission android:name="com.samsung.android.service.travel.permission.TRAVEL_SERVICE" />
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
+    <uses-permission android:name="com.samsung.android.permission.ENROLL_FINGERPRINT" />
+    <uses-permission android:name="com.samsung.android.permission.GET_SECRET_APPWIDGET_INFO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="com.sec.permission.BACKUP_RESTORE_HOMESCREEN" />
+    <uses-permission android:name="com.samsung.android.permission.GET_SECRET_PACKAGE_LIST" />
+    <uses-permission android:name="com.samsung.android.permission.SET_SECRET_PACKAGE_LIST" />
+    <uses-permission android:name="sstream.app.StoryProvider.Covers.READ_PERMISSION" />
+    <application android:theme="@style/TouchWiz" android:label="@string/application_name" android:icon="@drawable/ic_launcher_home" android:name="com.android.launcher2.LauncherApplication" android:hardwareAccelerated="@bool/config_hardwareAccelerated" android:largeHeap="@bool/config_largeHeap">
+        <activity android:name="com.android.launcher2.Launcher" android:clearTaskOnLaunch="true" android:stateNotNeeded="true" android:excludeFromRecents="true" android:launchMode="singleTask" android:screenOrientation="nosensor" android:configChanges="navigation|keyboardHidden|orientation|uiMode|screenSize" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.MONKEY" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.sec.launcher.action.INSTALL_WIDGET" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/TouchWiz.ChooserActivity" android:name="com.android.launcher2.ChooserActivity" android:multiprocess="true" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true">
+            <intent-filter>
+                <action android:name="sec.android.launcher2.intent.action.CHOOSER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.android.launcher2.InstallShortcutReceiver" android:permission="com.android.launcher.permission.INSTALL_SHORTCUT">
+            <intent-filter>
+                <action android:name="com.android.launcher.action.INSTALL_SHORTCUT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.android.launcher2.UninstallShortcutReceiver" android:permission="com.android.launcher.permission.UNINSTALL_SHORTCUT">
+            <intent-filter>
+                <action android:name="com.android.launcher.action.UNINSTALL_SHORTCUT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.android.launcher2.EasyModeReceiver">
+            <intent-filter>
+                <action android:name="com.android.launcher.action.EASY_MODE_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.android.launcher2.WidgetReceiver">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/preview" />
+        </receiver>
+        <receiver android:name="com.android.launcher2.InstallWidgetReceiver" android:permission="com.android.launcher.permission.INSTALL_WIDGET">
+            <intent-filter>
+                <action android:name="com.android.launcher.action.INSTALL_WIDGET" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.android.launcher2.XmlBackup" android:permission="com.sec.permission.BACKUP_RESTORE_HOMESCREEN" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.sec.android.intent.action.REQUEST_BACKUP_HOMESCREEN" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.sec.android.intent.action.REQUEST_RESTORE_HOMESCREEN" />
+            </intent-filter>
+        </receiver>
+        <provider android:name="com.android.launcher2.LauncherProvider" android:readPermission="com.android.launcher.permission.READ_SETTINGS" android:writePermission="com.android.launcher.permission.WRITE_SETTINGS" android:exported="true" android:authorities="com.sec.android.app.launcher.settings" />
+        <provider android:name="com.android.launcher2.LauncherProviderID" android:readPermission="com.android.launcher.permission.READ_SETTINGS" android:writePermission="com.android.launcher.permission.ID" android:exported="true" android:authorities="com.sec.android.app.launcher.settings.id" />
+        <activity android:theme="@style/TouchWiz.ChooserActivity" android:name="com.android.launcher2.LockScreenWallpaper" android:multiprocess="true" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true">
+            <intent-filter>
+                <action android:name="sec.android.launcher2.intent.action.LOCK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.android.launcher2.SecretItemViewActivity" />
+        <service android:name="com.android.launcher2.WidgetCreationService" android:permission="com.sec.android.launcher.permission.ADD_WIDGET_SHORTCUT" android:exported="true" />
+        <uses-library android:name="touchwiz" />
+        <uses-library android:name="sws" />
+        <uses-library android:name="sec_feature" />
+        <meta-data android:name="android.nfc.disable_beam_default" android:value="true" />
+    </application>
+</manifest>

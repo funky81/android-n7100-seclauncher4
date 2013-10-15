@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="appwidget_error_color">#ffcccccc</color>
+    <color name="workspace_all_apps_and_delete_zone_text_color">#ccffffff</color>
+    <color name="workspace_all_apps_and_delete_zone_text_shadow_color">#a0000000</color>
+    <color name="edit_cancel_menu_text">#ffffffff</color>
+    <color name="home_title_bar_text_color">#ffffffff</color>
+    <color name="menu_title_bar_text_color">#ffffffff</color>
+    <color name="menu_title_bar_unselectedTextColor">#99ffffff</color>
+    <color name="menu_title_bar_disableTextButtonColor">#66ffffff</color>
+    <color name="menu_title_selected_text">#ffebebeb</color>
+    <color name="menu_tab_container_bg">#3f000000</color>
+    <color name="menu_tab_shadow_color">#bf000000</color>
+    <color name="create_FolderTitleTextNormal">#fff5f5f5</color>
+    <color name="create_FolderTitleTextPressed">#fff5f5f5</color>
+    <color name="create_FolderTitleTextFocused">#fff5f5f5</color>
+    <color name="open_FolderTitleTextNormal">#fffffaf0</color>
+    <color name="open_FolderTitleTextPressed">#fffffaf0</color>
+    <color name="open_FolderTitleTextFocused">#fffffaf0</color>
+    <color name="menu_widget_text_highlight_color">#ff007ad2</color>
+    <color name="guide_select_wallpaper_text_color">#ffffffff</color>
+    <color name="move_to_secretbox_bg">#ff000000</color>
+    <color name="move_to_secretbox_item_text">#fff5f5f5</color>
+    <item type="color" name="APKTOOL_DUMMY_0015">false</item>
+    <item type="color" name="APKTOOL_DUMMY_0016">false</item>
+    <item type="color" name="APKTOOL_DUMMY_0017">false</item>
+    <item type="color" name="APKTOOL_DUMMY_0018">false</item>
+</resources>
