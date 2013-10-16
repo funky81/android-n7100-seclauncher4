@@ -15,13 +15,16 @@
 
 
 # instance fields
+.field private mContext:Landroid/content/Context;
+
 .field final synthetic this$0:Lcom/android/launcher2/LockScreenWallpaper;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/launcher2/LockScreenWallpaper;)V
+.method public constructor <init>(Lcom/android/launcher2/LockScreenWallpaper;Landroid/content/Context;)V
     .locals 0
     .parameter
+    .parameter "context"
 
     .prologue
     .line 241
@@ -29,6 +32,10 @@
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
+    .line 205
+    iput-object p2, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->mContext:Landroid/content/Context;
+
+    .line 206
     return-void
 .end method
 

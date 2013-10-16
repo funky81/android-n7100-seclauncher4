@@ -452,7 +452,7 @@
     .line 134
     new-instance v8, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;
 
-    invoke-direct {v8, p0}, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;-><init>(Lcom/android/launcher2/LockScreenWallpaper;)V
+    invoke-direct {v8, p0,p0}, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;-><init>(Lcom/android/launcher2/LockScreenWallpaper;Landroid/content/Context;)V
 
     iput-object v8, p0, Lcom/android/launcher2/LockScreenWallpaper;->mAdapter:Landroid/widget/BaseAdapter;
 
