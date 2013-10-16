@@ -17,9 +17,7 @@
 # instance fields
 .field icon:Landroid/widget/ImageView;
 
-.field text:Landroid/widget/TextView;
-
-.field text2:Landroid/widget/TextView;
+.field name:Landroid/widget/TextView;
 
 
 # direct methods
