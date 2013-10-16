@@ -306,9 +306,7 @@
     .parameter "parent"
 
     .prologue
-    const/16 v7, 0x8
-
-    .line 287
+    .line 197
     if-nez p2, :cond_3
 
     .line 198
@@ -342,239 +340,253 @@
 
     move-result-object v4
 
-
-
-    .line 297
-    .local v3, lp:Landroid/view/ViewGroup$LayoutParams;
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+    .line 202
+    .local v4, lp:Landroid/view/ViewGroup$LayoutParams;
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
 
     #getter for: Lcom/android/launcher2/LockScreenWallpaper;->mIconSize:I
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$300(Lcom/android/launcher2/LockScreenWallpaper;)I
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$300(Lcom/android/launcher2/LockScreenWallpaper;)I
 
-    move-result v4
+    move-result v5
 
-    iput v4, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
+    iput v5, v4, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    iput v4, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
+    iput v5, v4, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 299
+    .line 205
+    new-instance v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;
+
+    invoke-direct {v1}, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;-><init>()V
+
+    .line 206
+    .local v1, holder:Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;
+    iput-object v3, v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;->icon:Landroid/widget/ImageView;
+
+    .line 207
+    const v5, 0x7f0700db
+
+    invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/widget/TextView;
+
+    iput-object v5, v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;->name:Landroid/widget/TextView;
+
+    .line 209
     invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 307
-    .end local v3           #lp:Landroid/view/ViewGroup$LayoutParams;
+    .line 217
+    .end local v3           #icon:Landroid/widget/ImageView;
+    .end local v4           #lp:Landroid/view/ViewGroup$LayoutParams;
     :goto_0
     move v0, p1
 
-    .line 308
+    .line 218
     .local v0, count:I
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
 
     #getter for: Lcom/android/launcher2/LockScreenWallpaper;->isTypeBoth:Z
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$100(Lcom/android/launcher2/LockScreenWallpaper;)Z
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$100(Lcom/android/launcher2/LockScreenWallpaper;)Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_4
+    if-eqz v5, :cond_4
 
-    .line 309
+    .line 219
     const/4 v2, 0x0
 
     .local v2, i:I
     :goto_1
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
 
     #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    if-ge v2, v4, :cond_8
-
-    .line 310
-    const-string v5, "com.sec.android.gallery3d"
-
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/content/pm/ResolveInfo;
-
-    iget-object v4, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v4, v4, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    const-string v5, "com.sec.android.app.wallpaperchooser"
-
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/content/pm/ResolveInfo;
-
-    iget-object v4, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v4, v4, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    const-string v5, "com.android.wallpaper.livepicker"
-
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/content/pm/ResolveInfo;
-
-    iget-object v4, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v4, v4, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    .line 313
-    :cond_0
-    if-nez v0, :cond_1
-
-    .line 314
-    iget-object v5, v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;->text:Landroid/widget/TextView;
-
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/content/pm/ResolveInfo;
-
-    iget-object v6, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->mPm:Landroid/content/pm/PackageManager;
-    invoke-static {v6}, Lcom/android/launcher2/LockScreenWallpaper;->access$400(Lcom/android/launcher2/LockScreenWallpaper;)Landroid/content/pm/PackageManager;
-
-    move-result-object v6
-
-    invoke-virtual {v4, v6}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
-
-    move-result-object v4
-
-    invoke-virtual {v5, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 315
-    iget-object v4, v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;->text2:Landroid/widget/TextView;
-
-    invoke-virtual {v4, v7}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 316
-    iget-object v5, v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;->icon:Landroid/widget/ImageView;
-
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/content/pm/ResolveInfo;
-
-    iget-object v6, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->mPm:Landroid/content/pm/PackageManager;
-    invoke-static {v6}, Lcom/android/launcher2/LockScreenWallpaper;->access$400(Lcom/android/launcher2/LockScreenWallpaper;)Landroid/content/pm/PackageManager;
-
-    move-result-object v6
-
-    invoke-virtual {v4, v6}, Landroid/content/pm/ResolveInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v4
-
-    invoke-virtual {v5, v4}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 317
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->ItemName:[Ljava/lang/String;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$500(Lcom/android/launcher2/LockScreenWallpaper;)[Ljava/lang/String;
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
 
     move-result-object v5
 
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+    invoke-interface {v5}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    if-ge v2, v5, :cond_8
+
+    .line 220
+    const-string v6, "com.sec.android.gallery3d"
+
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
 
     #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Landroid/content/pm/ResolveInfo;
+    check-cast v5, Landroid/content/pm/ResolveInfo;
 
-    iget-object v4, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    iget-object v5, v5, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    iget-object v4, v4, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
+    iget-object v5, v5, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
 
-    aput-object v4, v5, p1
+    invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 319
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    const-string v6, "com.sec.android.app.wallpaperchooser"
+
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+
+    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/content/pm/ResolveInfo;
+
+    iget-object v5, v5, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v5, v5, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    const-string v6, "com.android.wallpaper.livepicker"
+
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+
+    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/content/pm/ResolveInfo;
+
+    iget-object v5, v5, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v5, v5, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    .line 223
+    :cond_0
+    if-nez v0, :cond_1
+
+    .line 224
+    iget-object v6, v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;->name:Landroid/widget/TextView;
+
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+
+    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/content/pm/ResolveInfo;
+
+    iget-object v7, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+
+    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->mPm:Landroid/content/pm/PackageManager;
+    invoke-static {v7}, Lcom/android/launcher2/LockScreenWallpaper;->access$400(Lcom/android/launcher2/LockScreenWallpaper;)Landroid/content/pm/PackageManager;
+
+    move-result-object v7
+
+    invoke-virtual {v5, v7}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
+
+    move-result-object v5
+
+    invoke-virtual {v6, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 225
+    iget-object v6, v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;->icon:Landroid/widget/ImageView;
+
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+
+    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/content/pm/ResolveInfo;
+
+    iget-object v7, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+
+    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->mPm:Landroid/content/pm/PackageManager;
+    invoke-static {v7}, Lcom/android/launcher2/LockScreenWallpaper;->access$400(Lcom/android/launcher2/LockScreenWallpaper;)Landroid/content/pm/PackageManager;
+
+    move-result-object v7
+
+    invoke-virtual {v5, v7}, Landroid/content/pm/ResolveInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v5
+
+    invoke-virtual {v6, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 226
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+
+    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->ItemName:[Ljava/lang/String;
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$500(Lcom/android/launcher2/LockScreenWallpaper;)[Ljava/lang/String;
+
+    move-result-object v6
+
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+
+    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/content/pm/ResolveInfo;
+
+    iget-object v5, v5, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v5, v5, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
+
+    aput-object v5, v6, p1
+
+    .line 228
     :cond_1
     add-int/lit8 v0, v0, -0x1
 
-    .line 309
+    .line 219
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto/16 :goto_1
 
-    .line 303
+    .line 213
     .end local v0           #count:I
     .end local v1           #holder:Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;
     .end local v2           #i:I
@@ -588,232 +600,177 @@
     .restart local v1       #holder:Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;
     goto/16 :goto_0
 
-    .line 323
+    .line 232
     .restart local v0       #count:I
     :cond_4
     const/4 v2, 0x0
 
     .restart local v2       #i:I
     :goto_2
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
 
     #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    if-ge v2, v4, :cond_8
-
-    .line 325
-    const-string v5, "com.sec.android.gallery3d"
-
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/content/pm/ResolveInfo;
-
-    iget-object v4, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v4, v4, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_5
-
-    const-string v5, "com.sec.android.app.wallpaperchooser"
-
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/content/pm/ResolveInfo;
-
-    iget-object v4, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v4, v4, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_5
-
-    const-string v5, "com.samsung.android.service.travel"
-
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/content/pm/ResolveInfo;
-
-    iget-object v4, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v4, v4, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_5
-
-    const-string v5, "com.samsung.android.service.coverlock"
-
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/content/pm/ResolveInfo;
-
-    iget-object v4, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v4, v4, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_7
-
-    .line 330
-    :cond_5
-    if-nez v0, :cond_6
-
-    .line 331
-    iget-object v5, v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;->text:Landroid/widget/TextView;
-
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/content/pm/ResolveInfo;
-
-    iget-object v6, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->mPm:Landroid/content/pm/PackageManager;
-    invoke-static {v6}, Lcom/android/launcher2/LockScreenWallpaper;->access$400(Lcom/android/launcher2/LockScreenWallpaper;)Landroid/content/pm/PackageManager;
-
-    move-result-object v6
-
-    invoke-virtual {v4, v6}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
-
-    move-result-object v4
-
-    invoke-virtual {v5, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 332
-    iget-object v4, v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;->text2:Landroid/widget/TextView;
-
-    invoke-virtual {v4, v7}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 333
-    iget-object v5, v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;->icon:Landroid/widget/ImageView;
-
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/content/pm/ResolveInfo;
-
-    iget-object v6, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->mPm:Landroid/content/pm/PackageManager;
-    invoke-static {v6}, Lcom/android/launcher2/LockScreenWallpaper;->access$400(Lcom/android/launcher2/LockScreenWallpaper;)Landroid/content/pm/PackageManager;
-
-    move-result-object v6
-
-    invoke-virtual {v4, v6}, Landroid/content/pm/ResolveInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v4
-
-    invoke-virtual {v5, v4}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 334
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
-
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->ItemName:[Ljava/lang/String;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$500(Lcom/android/launcher2/LockScreenWallpaper;)[Ljava/lang/String;
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
 
     move-result-object v5
 
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+    invoke-interface {v5}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    if-ge v2, v5, :cond_8
+
+    .line 233
+    const-string v6, "com.sec.android.gallery3d"
+
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
 
     #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Landroid/content/pm/ResolveInfo;
+    check-cast v5, Landroid/content/pm/ResolveInfo;
 
-    iget-object v4, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    iget-object v5, v5, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    iget-object v4, v4, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
+    iget-object v5, v5, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
 
-    aput-object v4, v5, p1
+    invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 336
+    move-result v5
+
+    if-nez v5, :cond_5
+
+    const-string v6, "com.sec.android.app.wallpaperchooser"
+
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+
+    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/content/pm/ResolveInfo;
+
+    iget-object v5, v5, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v5, v5, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_7
+
+    .line 235
+    :cond_5
+    if-nez v0, :cond_6
+
+    .line 236
+    iget-object v6, v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;->name:Landroid/widget/TextView;
+
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+
+    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/content/pm/ResolveInfo;
+
+    iget-object v7, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+
+    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->mPm:Landroid/content/pm/PackageManager;
+    invoke-static {v7}, Lcom/android/launcher2/LockScreenWallpaper;->access$400(Lcom/android/launcher2/LockScreenWallpaper;)Landroid/content/pm/PackageManager;
+
+    move-result-object v7
+
+    invoke-virtual {v5, v7}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
+
+    move-result-object v5
+
+    invoke-virtual {v6, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 237
+    iget-object v6, v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;->icon:Landroid/widget/ImageView;
+
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+
+    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/content/pm/ResolveInfo;
+
+    iget-object v7, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+
+    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->mPm:Landroid/content/pm/PackageManager;
+    invoke-static {v7}, Lcom/android/launcher2/LockScreenWallpaper;->access$400(Lcom/android/launcher2/LockScreenWallpaper;)Landroid/content/pm/PackageManager;
+
+    move-result-object v7
+
+    invoke-virtual {v5, v7}, Landroid/content/pm/ResolveInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v5
+
+    invoke-virtual {v6, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 238
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+
+    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->ItemName:[Ljava/lang/String;
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$500(Lcom/android/launcher2/LockScreenWallpaper;)[Ljava/lang/String;
+
+    move-result-object v6
+
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+
+    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->rList:Ljava/util/List;
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$000(Lcom/android/launcher2/LockScreenWallpaper;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/content/pm/ResolveInfo;
+
+    iget-object v5, v5, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v5, v5, Landroid/content/pm/ComponentInfo;->packageName:Ljava/lang/String;
+
+    aput-object v5, v6, p1
+
+    .line 240
     :cond_6
     add-int/lit8 v0, v0, -0x1
 
-    .line 323
+    .line 232
     :cond_7
     add-int/lit8 v2, v2, 0x1
 
     goto/16 :goto_2
 
-    .line 341
+    .line 245
     :cond_8
     return-object p2
 .end method
