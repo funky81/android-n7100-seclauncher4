@@ -202,4 +202,8 @@
     <item type="id" name="options_home_search">false</item>
     <item type="id" name="options_home_settings">false</item>
     <item type="id" name="options_home_help">false</item>
+    <item type="id" name="resolver_grid">false</item>
+    <item type="id" name="resolve_list_item">false</item>
+    <item type="id" name="activity_icon">false</item>
+    <item type="id" name="activity_name">false</item>
 </resources>

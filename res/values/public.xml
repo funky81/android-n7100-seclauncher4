@@ -524,6 +524,7 @@
     <public type="layout" name="APKTOOL_DUMMY_0024" id="0x7f030024" />
     <public type="layout" name="APKTOOL_DUMMY_0025" id="0x7f030025" />
     <public type="layout" name="APKTOOL_DUMMY_004e" id="0x7f03004e" />
+    <public type="layout" name="resolver_grid" id="0x7f030054" />
     <public type="anim" name="customhome_enter_from_left" id="0x7f040000" />
     <public type="anim" name="customhome_enter_from_right" id="0x7f040001" />
     <public type="anim" name="customhome_exit_to_left" id="0x7f040002" />
@@ -795,6 +796,7 @@
     <public type="id" name="options_home_search" id="0x7f0700d6" />
     <public type="id" name="options_home_settings" id="0x7f0700d7" />
     <public type="id" name="options_home_help" id="0x7f0700d8" />
+    <public type="id" name="resolver_grid" id="0x7f0700d9" />
     <public type="color" name="appwidget_error_color" id="0x7f080000" />
     <public type="color" name="workspace_all_apps_and_delete_zone_text_color" id="0x7f080001" />
     <public type="color" name="workspace_all_apps_and_delete_zone_text_shadow_color" id="0x7f080002" />
@@ -1757,4 +1759,7 @@
     <public type="style" name="APKTOOL_DUMMY_000d" id="0x7f0f000d" />
     <public type="style" name="APKTOOL_DUMMY_001b" id="0x7f0f001b" />
     <public type="menu" name="options_menu" id="0x7f100000" />
+    <public type="layout" name="resolve_list_item" id="0x7f030055" />
+    <public type="id" name="activity_icon" id="0x7f0700d10" />
+    <public type="id" name="activity_name" id="0x7f0700d11" />
 </resources>
