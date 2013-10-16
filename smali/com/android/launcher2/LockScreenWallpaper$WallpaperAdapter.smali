@@ -311,67 +311,8 @@
     .line 287
     if-nez p2, :cond_3
 
-    .line 288
-    iget-object v4, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
 
-    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->mInflater:Landroid/view/LayoutInflater;
-    invoke-static {v4}, Lcom/android/launcher2/LockScreenWallpaper;->access$200(Lcom/android/launcher2/LockScreenWallpaper;)Landroid/view/LayoutInflater;
 
-    move-result-object v4
-
-    const v5, 0x1090141
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v4, v5, p3, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p2
-
-    .line 292
-    new-instance v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;
-
-    invoke-direct {v1}, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;-><init>()V
-
-    .line 293
-    .local v1, holder:Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;
-    const v4, 0x1020014
-
-    invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/widget/TextView;
-
-    iput-object v4, v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;->text:Landroid/widget/TextView;
-
-    .line 294
-    const v4, 0x1020015
-
-    invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/widget/TextView;
-
-    iput-object v4, v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;->text2:Landroid/widget/TextView;
-
-    .line 295
-    const v4, 0x1020006
-
-    invoke-virtual {p2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/widget/ImageView;
-
-    iput-object v4, v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;->icon:Landroid/widget/ImageView;
-
-    .line 296
-    iget-object v4, v1, Lcom/android/launcher2/LockScreenWallpaper$ViewHolder;->icon:Landroid/widget/ImageView;
-
-    invoke-virtual {v4}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v3
 
     .line 297
     .local v3, lp:Landroid/view/ViewGroup$LayoutParams;
