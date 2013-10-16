@@ -1760,6 +1760,6 @@
     <public type="style" name="APKTOOL_DUMMY_001b" id="0x7f0f001b" />
     <public type="menu" name="options_menu" id="0x7f100000" />
     <public type="layout" name="resolve_list_item" id="0x7f030055" />
-    <public type="id" name="activity_icon" id="0x7f0700d10" />
-    <public type="id" name="activity_name" id="0x7f0700d11" />
+    <public type="id" name="activity_icon" id="0x7f0700da" />
+    <public type="id" name="activity_name" id="0x7f0700db" />
 </resources>

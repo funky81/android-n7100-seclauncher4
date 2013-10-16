@@ -311,6 +311,36 @@
     .line 287
     if-nez p2, :cond_3
 
+    .line 198
+    iget-object v5, p0, Lcom/android/launcher2/LockScreenWallpaper$WallpaperAdapter;->this$0:Lcom/android/launcher2/LockScreenWallpaper;
+
+    #getter for: Lcom/android/launcher2/LockScreenWallpaper;->mInflater:Landroid/view/LayoutInflater;
+    invoke-static {v5}, Lcom/android/launcher2/LockScreenWallpaper;->access$200(Lcom/android/launcher2/LockScreenWallpaper;)Landroid/view/LayoutInflater;
+
+    move-result-object v5
+
+    const v6, 0x7f030055
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v5, v6, p3, v7}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p2
+
+    .line 200
+    const v5, 0x7f0700da
+
+    invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/widget/ImageView;
+
+    .line 201
+    .local v3, icon:Landroid/widget/ImageView;
+    invoke-virtual {v3}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v4
 
 
 
